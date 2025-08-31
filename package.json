@@ -1,0 +1,46 @@
+{
+  "name": "commitbrew",
+  "displayName": "CommitBrew",
+  "description": "Automatically generate Git commit messages using Gemini API",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "SCM Providers",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:commitbrew.generateCommitMessage"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "commitbrew.generateCommitMessage",
+        "title": "Generate Commit Message",
+        "category": "CommitBrew"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.2.0",
+    "dotenv": "^16.3.1"
+  }
+}
