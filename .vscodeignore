@@ -1,0 +1,23 @@
+# Node modules are not needed in the package (dependencies are in package.json)
+node_modules/
+
+# Source maps / TypeScript sources (if compiled to JS)
+src/
+test/
+.vscode-test/
+
+# VS Code project settings
+.vscode/
+*.code-workspace
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Compiled output you don’t want to publish separately
+*.ts
+*.map
